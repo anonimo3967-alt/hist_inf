@@ -86,7 +86,7 @@ if canvas_result.image_data is not None and api_key and analyze_button:
         base64_image = encode_image_to_base64("img.png")
         st.session_state.base64_image = base64_image
             
-        prompt_text = (f"Describe in spanish briefly the image")
+        prompt_text = (f"Describe in spanish the image with a sad tone")
     
         # Make the request to the OpenAI API
         try:
@@ -143,9 +143,9 @@ if st.session_state.analysis_done:
                 max_tokens=500,
             )
             
-            st.markdown("**📖 Tu historia:**")
+            st.markdown("**📖 He aqui tu historia:**")
             st.write(story_response.choices[0].message.content)
 
 # Warnings for user action required
 if not api_key:
-    st.warning("Por favor ingresa tu API key.")
+    st.warning("Ingresa la APIIIII")

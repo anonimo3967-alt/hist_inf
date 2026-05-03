@@ -46,7 +46,7 @@ with col2:
 
 # Add canvas component
 drawing_mode = "freedraw"
-stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
+stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 5)
 stroke_color = "#000000" 
 bg_color = '#FFFFFF'
 
@@ -57,7 +57,7 @@ canvas_result = st_canvas(
     stroke_color=stroke_color,
     background_color=bg_color,
     height=300,
-    width=400,
+    width=600,
     drawing_mode=drawing_mode,
     key="canvas",
 )

@@ -31,7 +31,15 @@ def encode_image_to_base64(image_path):
 # Streamlit 
 st.set_page_config(page_title='Tablero Inteligente')
 st.title('Tablero Inteligente')
-st.image("Pinocchio.webp")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image("Pinocchio.webp")
+
+with col2:
+    st.text("Podrias intentar dibujar esta imagen de un infante alguna vez olvidado...")
+    
+
 with st.sidebar:
     st.subheader("Acerca de:")
     st.subheader("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto")

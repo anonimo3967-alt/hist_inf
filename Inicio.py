@@ -143,15 +143,6 @@ if st.session_state.analysis_done:
                 max_tokens=500,
             )
 
-    else st.button("✨ Crear historia de tristeza"):
-        with st.spinner("Creando historia..."):
-            story_prompt = f"Basándote en esta descripción: '{st.session_state.full_response}', crea una historia triste y dramatica. Debe ser creativa y breve."
-            
-            story_response = openai.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{"role": "user", "content": story_prompt}],
-                max_tokens=500,
-            )
             
             st.markdown("**📖 He aqui tu historia:**")
             st.write(story_response.choices[0].message.content)

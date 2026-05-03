@@ -76,7 +76,7 @@ analyze_button = st.button("Analiza la imagen", type="secondary")
 # Check if an image has been uploaded, if the API key is available, and if the button has been pressed
 if canvas_result.image_data is not None and api_key and analyze_button:
 
-    with st.spinner("Analizando ..."):
+    with st.spinner("Analizando lagrimas de tinta..."):
         # Encode the image
         input_numpy_array = np.array(canvas_result.image_data)
         input_image = Image.fromarray(input_numpy_array.astype('uint8')).convert('RGBA')
@@ -133,7 +133,7 @@ if st.session_state.analysis_done:
     st.divider()
     st.subheader("📚 ¿Quieres crear una historia?")
     
-    if st.button("✨ Crear historia de comedía"):
+    if st.button("😂 Crear historia de comedía"):
         with st.spinner("Creando historia..."):
             story_prompt = f"Basándote en esta descripción: '{st.session_state.full_response}', crea una historia graciosa e ironica. Debe ser creativa y breve."
             

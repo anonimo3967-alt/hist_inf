@@ -31,6 +31,7 @@ def encode_image_to_base64(image_path):
 # Streamlit 
 st.set_page_config(page_title='Tablero Inteligente')
 st.title('Tablero Inteligente')
+st.text("Esta aplicación tiene la capacidad de interpretar un boceto. Empieza dibujando en el panel proporcionado por alguna entidad.")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -40,10 +41,7 @@ with col2:
     st.subheader("Podrias intentar dibujar esta imagen de un infante alguna vez olvidado...", text_alignment="center")
     
 
-with st.sidebar:
-    st.subheader("Acerca de:")
-    st.subheader("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto")
-st.subheader("Dibuja el boceto en el panel y presiona el botón para analizarla")
+
 
 # Add canvas component
 drawing_mode = "freedraw"

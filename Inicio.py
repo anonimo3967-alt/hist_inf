@@ -37,7 +37,7 @@ with col1:
     st.image("Pinocchio.webp")
 
 with col2:
-    st.text("Podrias intentar dibujar esta imagen de un infante alguna vez olvidado...")
+    st.subheader("Podrias intentar dibujar esta imagen de un infante alguna vez olvidado..." text_alignment="center")
     
 
 with st.sidebar:

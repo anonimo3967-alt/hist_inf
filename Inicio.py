@@ -143,7 +143,7 @@ if st.session_state.analysis_done:
                 max_tokens=500,
             )
 
-    elif st.button("✨ Crear historia de tristeza"):
+    else st.button("✨ Crear historia de tristeza"):
         with st.spinner("Creando historia..."):
             story_prompt = f"Basándote en esta descripción: '{st.session_state.full_response}', crea una historia triste y dramatica. Debe ser creativa y breve."
             
